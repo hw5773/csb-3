@@ -183,7 +183,7 @@ int main(int argc, char *argv[])
     abort();
   }
 
-  /* TODO: Make the RSA public key to bytes */
+  /* Make the RSA public key to bytes */
   ret = make_rsa_pubkey_to_bytes(kst, my_pk, &len);
   if (ret == FAILURE)
   {
@@ -217,7 +217,7 @@ int main(int argc, char *argv[])
     abort();
   }
 
-  /* TODO: Make the bytes to the Server's public key */
+  /* Make the bytes to the Server's public key */
   ret = make_bytes_to_rsa_pubkey(peer, buf, rlen);
   if (ret == FAILURE)
   {
