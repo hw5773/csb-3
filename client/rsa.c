@@ -238,6 +238,14 @@ int rsa_sign_message(struct keypair *kst, unsigned char *msg, int mlen,
   fstart("kst: %p, sign: %p, slen: %p, msg: %p, mlen: %d", 
       kst, sign, slen, msg, mlen);
 
+  assert(kst != NULL);
+  assert(msg != NULL);
+  assert(mlen > 0);
+  assert(sign != NULL);
+  assert(slen != NULL);
+
+  //*slen =;
+
   ffinish("ret: %d", ret);
   return ret;
 }
@@ -248,6 +256,12 @@ int rsa_verify_message(struct keypair *kst, unsigned char *sign, int slen,
 {
   fstart("kst: %p, sign: %p, slen: %d, msg: %p, mlen: %d", 
       kst, sign, slen, msg, mlen);
+
+  assert(kst != NULL);
+  assert(sign != NULL);
+  assert(slen > 0);
+  assert(msg != NULL);
+  assert(mlen > 0);
 
   ffinish("ret: %d", ret);
   return ret;
