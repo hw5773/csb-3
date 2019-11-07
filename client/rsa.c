@@ -60,29 +60,14 @@ struct keypair *init_rsa_keypair(const char *skname, const char *pkname)
   }
   memset(ret, 0x0, sizeof(struct keypair));
 
-
+  // TODO: Please implement the following (Load the private key from the file)
   if (skname)
   {
-    FILE *sk = fopen(skname, "rb");
-    ret->priv = RSA_new();
-    ret->priv = PEM_read_RSAPrivateKey(sk, NULL, NULL, NULL);
-    if (!(ret->priv))
-      emsg("Error to load the RSA private key");
-    else
-      imsg("Succeed to load the RSA private key");
-    fclose(sk);
   }
 
+  // TODO: Please implement the following (Load the public key from the file)
   if (pkname)
   {
-    FILE *pk = fopen(pkname, "rb");
-    ret->pub = RSA_new();
-    ret->pub = PEM_read_RSA_PUBKEY(pk, NULL, NULL, NULL);
-    if (!(ret->pub))
-      emsg("Error to load the RSA public key");
-    else
-      imsg("Succeed to load the RSA public key");
-    fclose(pk);
   }
 
   ffinish("ret: %p", ret);
