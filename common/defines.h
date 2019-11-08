@@ -5,7 +5,7 @@
 #include <openssl/ssl.h>
 
 #define SUCCESS 1
-#define FAILURE -1
+#define FAILURE 0
 
 #define BUF_SIZE 512
 #define NUM_OF_PROBLEMS 3
