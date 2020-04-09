@@ -37,8 +37,8 @@ int main(int argc, char *argv[])
   unsigned char peer_pk[BUF_SIZE] = {0, };
   unsigned char plain[BUF_SIZE] = {0, };
   unsigned char ciph[BUF_SIZE] = {0, };
-  unsigned char *msg[NUM_OF_PROBLEMS][BUF_SIZE];
-  unsigned char *sign[NUM_OF_PROBLEMS][BUF_SIZE];
+  unsigned char msg[NUM_OF_PROBLEMS][BUF_SIZE];
+  unsigned char sign[NUM_OF_PROBLEMS][BUF_SIZE];
   unsigned char *sptr;
   int mlen[NUM_OF_PROBLEMS];
   int slen[NUM_OF_PROBLEMS];
